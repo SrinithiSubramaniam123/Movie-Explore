@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* ===== COLOR TOKENS ===== */
+  --bg-deep: #0a0918;
+  --bg-mid: #161033;
+  --bg-soft: #1f1640;
+
+  --accent-violet: #8b5cf6;
+  --accent-violet-dim: #6d3df0;
+  --accent-magenta: #ec4899;
+  --accent-cyan: #22d3ee;
+  --accent-amber: #fbbf24;
+  --accent-green: #34d399;
+
+  --text-bright: #f5f3ff;
+  --text-soft: #cbc6e0;
+  --text-muted: #8d86ad;
+
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-border-hover: rgba(255, 255, 255, 0.28);
+
+  --font-display: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at 15% 0%, rgba(139, 92, 246, 0.25), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(236, 72, 153, 0.18), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(34, 211, 238, 0.12), transparent 45%),
+    linear-gradient(160deg, var(--bg-deep), var(--bg-mid) 55%, var(--bg-soft));
+  background-attachment: fixed;
+  color: var(--text-bright);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+::selection {
+  background: var(--accent-violet);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.4);
+  border-radius: 10px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
